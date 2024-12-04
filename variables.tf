@@ -1,20 +1,16 @@
 variable "project_name" {
   type = string
+  
 }
 
 variable "environment" {
   type = string 
+  deafult = dev
 }
 
 variable "sg_name" {
   type = string
 }
-
-variable "sg_name_final" {
-  type = string
-}
-
-
 
 variable "sg_description" {
   type = string

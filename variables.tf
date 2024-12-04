@@ -5,7 +5,7 @@ variable "project_name" {
 
 variable "environment" {
   type = string 
-  default = dev
+  
 }
 
 variable "sg_name" {
@@ -23,6 +23,10 @@ variable "common_tags" {
 variable "sg_tags" {
   type = map
   default = {}
+}
+
+variable "vpc_id" {
+  type = string
 }
 
 variable "ingress_rules" {

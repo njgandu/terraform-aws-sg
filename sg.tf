@@ -1,4 +1,4 @@
-resource "aws_security_group" "module_sg" {
+resource "aws_security_group" "allow_ssh" {
   name   = local.sg_name_final
   #vpc_id = var.vpc_id
   description = var.sg_description
@@ -9,6 +9,7 @@ resource "aws_security_group" "module_sg" {
          from_port       = ingress.value["from_port"]
          to_port         = ingress.value["to_port"]
          protocol        = ingress.value["protocol"]
+         cidr_block      = ingress.value["cidr_block"]
        }  
     }
 
@@ -18,6 +19,7 @@ resource "aws_security_group" "module_sg" {
         from_port       = egress.value["from_port"]
         to_port         = egress.value["to_port"]
         protocol        = egress.value["protocol"]
+        cidr_block      = egress.value["cidr_block"]
       }
     }
 

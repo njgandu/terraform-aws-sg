@@ -1,4 +1,4 @@
-resource "aws_security_group" "allow_ssh" {
+resource "aws_security_group" "expense" {
   name   = local.sg_name_final
   vpc_id = var.vpc_id
   description = var.sg_description

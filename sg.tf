@@ -1,6 +1,6 @@
 resource "aws_security_group" "allow_ssh" {
   name   = local.sg_name_final
-  #vpc_id = var.vpc_id
+  vpc_id = var.vpc_id
   description = var.sg_description
 
     dynamic ingress {
